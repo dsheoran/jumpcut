@@ -6,6 +6,11 @@ workflows:
     jobs:
       - cypress/run:
           executor: cypress/base-8
+          record: true        # record results on Cypress Dashboard
+          parallel: true      # split all specs across machines
+          parallelism: 4      # use 4 CircleCI machines to finish quickly
+          group: 'all tests'  # name this group "all tests" on the dashboard
+          start: 'npm start'
           post-steps:
             - store_test_results:
-                path: cypress/results      
+                path: cypress/results
