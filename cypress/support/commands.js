@@ -23,8 +23,8 @@
 //
 // -- This is will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
-Cypress.Co
-mmands.add("iframe", { prevSubject: "element" }, $iframe => {
+
+Cypress.Commands.add("iframe", { prevSubject: "element" }, $iframe => {
   Cypress.log({
     name: "iframe",
     consoleProps() {

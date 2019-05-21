@@ -4,9 +4,9 @@
   })
 
   it('Create Account positive flow', function () {
-    cy.get('#n_name').type('ab')
-    cy.get('#n_email').type('zdb@xyz.com')
-    cy.get('#n_username').type('dtkrefgre')
+    cy.get('#n_name').type('avfb')
+    cy.get('#n_email').type('zeredb@xyz.com')
+    cy.get('#n_username').type('dtekrefgre')
     cy.get('#n_password').type('123456')
     cy.get('#signup-block > .enrollment-body > .enrollment-btn').click()
     //check if the account is created successfully
@@ -14,17 +14,17 @@
   })
 
   it('Create Account when email address is invalid', function () {
-    cy.get('#n_name').type('abw1c')
+    cy.get('#n_name').type('abtrew1c')
     cy.get('#n_email').type('arwdb@xyz.')
-    cy.get('#n_username').type('abc')
+    cy.get('#n_username').type('abcg')
     //check for the error message
     cy.get('#n_email-error').should('contain', 'Please enter a valid email address')
   })
 
   it('Create Account when email address already exists', function () {
-    cy.get('#n_name').type('abcd')
-    cy.get('#n_email').type('abc@xyz.com')
-    cy.get('#n_username').type('errrtc')
+    cy.get('#n_name').type('arerwbcd')
+    cy.get('#n_email').type('zeredb@xyz.com')
+    cy.get('#n_username').type('errtrrtc')
     //check for the error message
     cy.get('#n_email-error').should('contain', 'Email already exists')
   })
@@ -32,7 +32,7 @@
   it('Create Account when username already exists', function () {
     cy.get('#n_name').type('abcd')
     cy.get('#n_email').type('abetc@xyz.com')
-    cy.get('#n_username').type('abc')
+    cy.get('#n_username').type('dtekrefgre')
     cy.get('#n_password').type('123456')
     //check for the error message
     cy.get('#n_username-error').should('contain', 'Username already exists')
@@ -41,7 +41,7 @@
   it('Create Account when username is less than 3 characters', function () {
     cy.get('#n_name').type('abcd')
     cy.get('#n_email').type('abetc@xyz.com')
-    cy.get('#n_username').type('da')
+    cy.get('#n_username').type('sa')
     cy.get('#n_password').type('123456')
     //check for the error message
     cy.get('#n_username-error').should('contain', 'Username should be atleast 3 characters long')
