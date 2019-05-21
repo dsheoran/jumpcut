@@ -6,3 +6,5 @@ workflows:
     jobs:
       - cypress/run:
           executor: cypress/base-8
+     - store_test_results:
+          path: test-results
