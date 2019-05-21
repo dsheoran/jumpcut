@@ -1,0 +1,33 @@
+{
+  "name": "dd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "cypress-multi-reporters": "^1.1.12",
+    "mocha-junit-reporters": "^1.23.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "cypress": "^3.2.0",
+    "mocha": "^5.2.0",
+    "mochawesome": "^3.1.2",
+    "mochawesome-merge": "^1.0.7"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "test": "npm start & cypress run",
+    "e2e": "cypress run",
+    "cy:run": "cypress run",
+    "cy:run:record": "cypress run --record",
+    "cy:open": "cypress open",
+    "cleanup": "rm -fr mochawesome-report",
+    "merge_reports": "mochawesome-merge --reportDir mochawesome-report > mochawesome-report/output.json",
+    "generate_mochawesome_report": "marge mochawesome-report/output.json",
+    "test_jumpcut": "npm run cleanup; cypress run; npm run merge_reports; npm run generate_mochawesome_report"
+  }
+}

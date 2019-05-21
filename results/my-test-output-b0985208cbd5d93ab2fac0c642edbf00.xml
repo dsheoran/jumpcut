@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="125.65900000000002" tests="11" failures="0">
+  <testsuite name="Root Suite" timestamp="2019-05-17T04:04:46" tests="0" failures="0" time="0">
+  </testsuite>
+  <testsuite name="Create Account" timestamp="2019-05-17T04:04:46" tests="11" failures="0" time="125.65900000000002">
+    <testcase name="Create Account Create Account positive flow" time="16.412" classname="Create Account positive flow">
+    </testcase>
+    <testcase name="Create Account Create Account when email address is invalid" time="10.821" classname="Create Account when email address is invalid">
+    </testcase>
+    <testcase name="Create Account Create Account when email address already exists" time="14.023" classname="Create Account when email address already exists">
+    </testcase>
+    <testcase name="Create Account Create Account when username already exists" time="11.918" classname="Create Account when username already exists">
+    </testcase>
+    <testcase name="Create Account Create Account when username is less than 3 characters" time="10.172" classname="Create Account when username is less than 3 characters">
+    </testcase>
+    <testcase name="Create Account Create Account when username doesn&apos;t start from a letter" time="10.794" classname="Create Account when username doesn&apos;t start from a letter">
+    </testcase>
+    <testcase name="Create Account Create Account when mandatory field(Full Name) is not filled" time="10.257" classname="Create Account when mandatory field(Full Name) is not filled">
+    </testcase>
+    <testcase name="Create Account Create Account when mandatory field(Email Address) is not filled" time="8.898" classname="Create Account when mandatory field(Email Address) is not filled">
+    </testcase>
+    <testcase name="Create Account Create Account when mandatory field(Username) is not filled" time="10.084" classname="Create Account when mandatory field(Username) is not filled">
+    </testcase>
+    <testcase name="Create Account Create Account when mandatory field(Password) is not filled" time="10.82" classname="Create Account when mandatory field(Password) is not filled">
+    </testcase>
+    <testcase name="Create Account Create Account positive when Password is less than 6 characters" time="11.46" classname="Create Account positive when Password is less than 6 characters">
+    </testcase>
+  </testsuite>
+</testsuites>

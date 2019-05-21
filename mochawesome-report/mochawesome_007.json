@@ -1,0 +1,115 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 2,
+    "pending": 0,
+    "failures": 1,
+    "start": "2019-05-21T13:52:55.458Z",
+    "end": "2019-05-21T13:55:05.936Z",
+    "duration": 130478,
+    "testsRegistered": 3,
+    "passPercent": 66.7,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "passPercentClass": "warning",
+    "pendingPercentClass": "danger"
+  },
+  "suites": {
+    "uuid": "3dcbb2f0-e920-4c3c-b95d-1649d9f458a4",
+    "title": "",
+    "fullFile": "",
+    "file": "",
+    "beforeHooks": [],
+    "afterHooks": [],
+    "tests": [],
+    "suites": [
+      {
+        "uuid": "61e9e234-ba6f-4220-8702-7af7e24fa5a3",
+        "title": "Enroll Now",
+        "fullFile": "",
+        "file": "",
+        "beforeHooks": [],
+        "afterHooks": [],
+        "tests": [
+          {
+            "title": "Enroll Now positive flow using Credit or Debit card as the payment method",
+            "fullTitle": "Enroll Now Enroll Now positive flow using Credit or Debit card as the payment method",
+            "duration": 65315,
+            "state": "failed",
+            "pass": false,
+            "fail": true,
+            "pending": false,
+            "code": "//select PayPal as the payment method\ncy.get(':nth-child(8) > label').click(); //Check the \"I understand the 365-day guarantee policy.\" checkbox\ncy.get('.policy-block > label').click(); //click enroll now button\ncy.get('#enrollment-btn').click();",
+            "err": {
+              "message": "Error: Cypress command timeout of '4000ms' exceeded.",
+              "estack": "Error: Cypress command timeout of '4000ms' exceeded.\n    at https://jumpcut.com/__cypress/runner/cypress_runner.js:63775:25"
+            },
+            "isRoot": false,
+            "uuid": "9cbc09c9-2807-4a72-b9e5-22b4cd3cdab3",
+            "isHook": false,
+            "skipped": false
+          },
+          {
+            "title": "Enroll Now use Credit or Debit card as the payment method without filling the mandatory details",
+            "fullTitle": "Enroll Now Enroll Now use Credit or Debit card as the payment method without filling the mandatory details",
+            "duration": 45742,
+            "state": "passed",
+            "speed": "slow",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "//Check the \"I understand the 365-day guarantee policy.\" checkbox\ncy.get('.policy-block > label').click(); //click enroll now button\ncy.get('#enrollment-btn').click(); //check for the error message\ncy.get('.payment-error').should('contain', 'All fields are empty. Cannot tokenize empty card fields.!');",
+            "err": {},
+            "isRoot": false,
+            "uuid": "514e96c0-213c-4f80-9209-5f71b286a675",
+            "isHook": false,
+            "skipped": false
+          },
+          {
+            "title": "Enroll Now without selecting the policy checkbox ",
+            "fullTitle": "Enroll Now Enroll Now without selecting the policy checkbox ",
+            "duration": 19211,
+            "state": "passed",
+            "speed": "slow",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "//click enroll now button\ncy.get('#enrollment-btn').click(); //check for the error message\ncy.get('.payment-error').should('contain', 'Please review and agree to the 365-day guarantee'); //verify checkbox is not selected\ncy.get('#policy').should('not.checked'); //verify when the policy checkbox is not selcted and enroll button is clicked, the checkbox turn red\ncy.get('#policy').should('have.css', 'border-color', '#F44336');",
+            "err": {},
+            "isRoot": false,
+            "uuid": "9649a8be-8e38-4666-b568-bf91e3b25c04",
+            "isHook": false,
+            "skipped": false
+          }
+        ],
+        "suites": [],
+        "passes": [
+          "514e96c0-213c-4f80-9209-5f71b286a675",
+          "9649a8be-8e38-4666-b568-bf91e3b25c04"
+        ],
+        "failures": [
+          "9cbc09c9-2807-4a72-b9e5-22b4cd3cdab3"
+        ],
+        "pending": [],
+        "skipped": [],
+        "duration": 130268,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 2000
+      }
+    ],
+    "passes": [],
+    "failures": [],
+    "pending": [],
+    "skipped": [],
+    "duration": 0,
+    "root": true,
+    "rootEmpty": true,
+    "_timeout": 2000
+  },
+  "copyrightYear": 2019
+}

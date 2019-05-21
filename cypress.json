@@ -1,0 +1,14 @@
+{
+  "baseUrl": "https://jumpcut.com/enroll/gd5vbvp",
+  "viewportWidth": 1280,
+  "viewportHeight": 800,
+  "video": false,
+  "reporter": "mochawesome",
+  "reporterOptions": {
+    "overwrite": false,
+    "html": false,
+    "json": true,
+    "chromeWebSecurity": false
+  },
+  "projectId": "ksb53c"
+}

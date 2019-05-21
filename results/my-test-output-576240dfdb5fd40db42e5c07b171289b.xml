@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="17.534" tests="1" failures="0">
+  <testsuite name="Root Suite" timestamp="2019-05-17T04:07:04" tests="0" failures="0" time="0">
+  </testsuite>
+  <testsuite name="Log in" timestamp="2019-05-17T04:07:04" tests="1" failures="0" time="17.534">
+    <testcase name="Log in Log in positive flow " time="17.534" classname="Log in positive flow ">
+    </testcase>
+  </testsuite>
+</testsuites>

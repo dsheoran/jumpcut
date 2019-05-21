@@ -1,0 +1,112 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2019-05-21T13:35:15.941Z",
+    "end": "2019-05-21T13:36:32.141Z",
+    "duration": 76200,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "passPercentClass": "success",
+    "pendingPercentClass": "danger"
+  },
+  "suites": {
+    "uuid": "2830789e-e193-4616-935d-1860a5194a7d",
+    "title": "",
+    "fullFile": "",
+    "file": "",
+    "beforeHooks": [],
+    "afterHooks": [],
+    "tests": [],
+    "suites": [
+      {
+        "uuid": "19ce80a7-018b-4071-a222-f8af9ecb358c",
+        "title": "Enroll Now",
+        "fullFile": "",
+        "file": "",
+        "beforeHooks": [],
+        "afterHooks": [],
+        "tests": [
+          {
+            "title": "Enroll Now positive flow using Credit or Debit card as the payment method",
+            "fullTitle": "Enroll Now Enroll Now positive flow using Credit or Debit card as the payment method",
+            "duration": 32535,
+            "state": "passed",
+            "speed": "slow",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "//select PayPal as the payment method\ncy.get(':nth-child(8) > label').click(); //Check the \"I understand the 365-day guarantee policy.\" checkbox\ncy.get('.policy-block > label').click(); //click enroll now button\ncy.get('#enrollment-btn').click();",
+            "err": {},
+            "isRoot": false,
+            "uuid": "db69cf84-91d4-4002-b1b1-8a87a5710832",
+            "isHook": false,
+            "skipped": false
+          },
+          {
+            "title": "Enroll Now use Credit or Debit card as the payment method without filling the mandatory details",
+            "fullTitle": "Enroll Now Enroll Now use Credit or Debit card as the payment method without filling the mandatory details",
+            "duration": 21309,
+            "state": "passed",
+            "speed": "slow",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "//Check the \"I understand the 365-day guarantee policy.\" checkbox\ncy.get('.policy-block > label').click(); //click enroll now button\ncy.get('#enrollment-btn').click(); //check for the error message\ncy.get('.payment-error').should('contain', 'All fields are empty. Cannot tokenize empty card fields.!');",
+            "err": {},
+            "isRoot": false,
+            "uuid": "885bd29a-5cef-4425-bc9b-58a1cbdecf19",
+            "isHook": false,
+            "skipped": false
+          },
+          {
+            "title": "Enroll Now without selecting the policy checkbox ",
+            "fullTitle": "Enroll Now Enroll Now without selecting the policy checkbox ",
+            "duration": 21834,
+            "state": "passed",
+            "speed": "slow",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "//click enroll now button\ncy.get('#enrollment-btn').click(); //check for the error message\ncy.get('.payment-error').should('contain', 'Please review and agree to the 365-day guarantee'); //verify checkbox is not selected\ncy.get('#policy').should('not.checked'); //verify when the policy checkbox is not selcted and enroll button is clicked, the checkbox turn red\ncy.get('#policy').should('have.css', 'border-color', '#F44336');",
+            "err": {},
+            "isRoot": false,
+            "uuid": "f1fe2809-1e4f-473e-bb4c-cebe1c047bd9",
+            "isHook": false,
+            "skipped": false
+          }
+        ],
+        "suites": [],
+        "passes": [
+          "db69cf84-91d4-4002-b1b1-8a87a5710832",
+          "885bd29a-5cef-4425-bc9b-58a1cbdecf19",
+          "f1fe2809-1e4f-473e-bb4c-cebe1c047bd9"
+        ],
+        "failures": [],
+        "pending": [],
+        "skipped": [],
+        "duration": 75678,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 2000
+      }
+    ],
+    "passes": [],
+    "failures": [],
+    "pending": [],
+    "skipped": [],
+    "duration": 0,
+    "root": true,
+    "rootEmpty": true,
+    "_timeout": 2000
+  },
+  "copyrightYear": 2019
+}
